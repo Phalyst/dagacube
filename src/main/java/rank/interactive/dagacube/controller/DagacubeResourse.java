@@ -37,8 +37,8 @@ public class DagacubeResourse {
         return new ResponseEntity<>(service.deposit(request), HttpStatus.OK);
     }
 
-    @PostMapping(value = "/winning/transactions")
-    public ResponseEntity<List<TransactionReportResponse>> winTransactions(@Validated @RequestBody TransactionReportRequest request) {
+    @PostMapping(value = "/transactions/report")
+    public ResponseEntity<List<TransactionReportResponse>> transactionsReport(@Validated @RequestBody TransactionReportRequest request) {
         return new ResponseEntity<>(service.winTransactions(request), HttpStatus.OK);
     }
 
